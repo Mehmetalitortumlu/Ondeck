@@ -105,11 +105,11 @@
             <nav class="hidden md:flex  justify-between ">
                 <!-- Menu -->
                 <div class="flex items-center space-x-8 ">
-                    <a href="#" class="group relative ">
+                    <a href="#" class="group relative " id="product">
                         Products
                         <!-- Product Detail -->
-                        <div
-                            class="absolute -left-20 top-10 opacity-0 group-hover:opacity-100 duration-500  bg-white rounded p-10 w-128">
+                        <div id="productdetail"
+                            class="absolute -left-20 top-10 hidden duration-500 bg-white rounded p-10 w-128">
                             <!-- Product Detail Menu -->
                             <div class="flex flex-col justify-center">
                                 <!-- Product Item 1 -->
@@ -241,6 +241,12 @@
                 // düzenlenecek
             })
         }
+
+        let product = document.getElementById('product')
+        product.addEventListener('click', function () {
+            let productdetail = document.getElementById('productdetail')
+            productdetail.classList.toggle('hidden')
+        })
     </script>
 </body>
 
